@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fff;
+  --foreground: #171717;
+  --muted: #737373;
+  --line: #eaeaea;
+  --accent: #7c3aed;
+}
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+html {
+  scroll-padding-top: 90px;
+}
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Vazirmatn", sans-serif;
+}
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+::selection {
+  color: #fff;
+  background: #7c3aed;
+}
+.container-shell {
+  width: min(1160px, calc(100% - 40px));
+  margin-inline: auto;
+}
+.section-space {
+  padding-block: 100px;
+}
+.section-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+}
+.section-kicker::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+}
+.soft-grid {
+  background-image:
+    linear-gradient(to right, #f1f1f1 1px, transparent 1px),
+    linear-gradient(to bottom, #f1f1f1 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(to bottom, #000, transparent 90%);
+}
+.hero-orb {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgb(124 58 237 / 13%), transparent 68%);
+  filter: blur(14px);
+  pointer-events: none;
+}
+@media (max-width: 640px) {
+  .container-shell {
+    width: min(calc(100% - 28px), 1160px);
+  }
+  .section-space {
+    padding-block: 72px;
+  }
+  .hero-orb {
+    width: 280px;
+    height: 280px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  font-family: "Vazirmatn", sans-serif;
+}
