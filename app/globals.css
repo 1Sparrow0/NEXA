@@ -5,7 +5,7 @@
   --foreground: #171717;
   --muted: #737373;
   --line: #eaeaea;
-  --accent: #7c3aed;
+  --accent: #020d29;
 }
 * {
   box-sizing: border-box;
@@ -32,7 +32,7 @@ a {
 }
 ::selection {
   color: #fff;
-  background: #7c3aed;
+  background: #020d29;
 }
 .container-shell {
   width: min(1160px, calc(100% - 40px));
